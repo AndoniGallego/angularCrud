@@ -1,0 +1,25 @@
+<div class="col-sm-8">
+  <h2>Leer Datos:</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Posicion</th>
+        <th>Email</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of empleados;let i = index">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.position }}</td>
+        <td>{{ employee.email }}</td>
+        <td>
+          <a (click)="deleteEmployee(i)" class="btn btn-danger">
+            Borrar
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angCrud';
+
+  title: string = 'Angular Crud';
+
+  msg: string = '';
+
+  empleadosLista: any;
+
+  onEmpleados(empleadoslistado: any){
+    this.empleadosLista = empleadoslistado;
+  }
+
+  onMensaje(mensaje: string){
+    this.msg = mensaje;
+  }
 }
